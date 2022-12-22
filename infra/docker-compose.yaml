@@ -7,7 +7,7 @@ services:
     env_file:
       - ./.env
   web:
-    image: doomkirov/yamdb_final
+    build: image: doomkirov/yamdb_final
     restart: always
     volumes:
       - "static_value:/app/static/"
