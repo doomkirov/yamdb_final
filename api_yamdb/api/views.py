@@ -5,35 +5,23 @@ from django.contrib.auth import get_user_model
 from django.core.mail import send_mail
 from django.db.models import Avg
 from django_filters.rest_framework import DjangoFilterBackend
-
 from rest_framework import filters, status, viewsets
 from rest_framework.decorators import action
 from rest_framework.generics import get_object_or_404
 from rest_framework.permissions import AllowAny, IsAuthenticated
 from rest_framework.response import Response
 from rest_framework_simplejwt.views import TokenObtainPairView
-
-
 from reviews.models import Category, Genre, Review, Title
+
 from .filters import TitleFilter
 from .mixins import CreateListDeleteViewSet
-from .permissions import (
-    IsAdministratorRole,
-    IsAdminOrReadOnly,
-    IsSuperuserAdminModeratorAuthorOrReadOnly,
-)
-from .serializers import (
-    CategorySerializer,
-    CommentSerializer,
-    CredentialsSerializer,
-    GenreSerializer,
-    GetTitleSerializer,
-    MyTokenObtainPairSerializer,
-    PostTitleSerializer,
-    ReviewSerializer,
-    UserRoleSerializer,
-    UserSerializer,
-)
+from .permissions import (IsAdministratorRole, IsAdminOrReadOnly,
+                          IsSuperuserAdminModeratorAuthorOrReadOnly)
+from .serializers import (CategorySerializer, CommentSerializer,
+                          CredentialsSerializer, GenreSerializer,
+                          GetTitleSerializer, MyTokenObtainPairSerializer,
+                          PostTitleSerializer, ReviewSerializer,
+                          UserRoleSerializer, UserSerializer)
 
 User = get_user_model()
 
