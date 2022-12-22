@@ -1,3 +1,4 @@
+![Yamdb workflow status](https://github.com/doomkirov/yamdb_final/actions/workflows/yamdb_workflow.yml/badge.svg)
 # API_YAMDB
 REST API проект для сервиса YaMDb — тут пользователи могут оставлять свои обзоры и отзывы на различные произведения искусства.
 
